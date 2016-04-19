@@ -24,13 +24,13 @@ public class UniqueIntHadoop {
         }
     }
 
-    //Important Property is that the input types of key/value pairs and output types of key/values should be same
+   /*//Important Property is that the input types of key/value pairs and output types of key/values should be same
     static class Combiner extends Reducer<IntWritable, NullWritable, IntWritable, NullWritable> {
     	  @Override
     	  protected void reduce(IntWritable key, Iterable<NullWritable> values, Context context) throws IOException, InterruptedException {
     	   context.write(key, NullWritable.get());
     	  }
-    }
+    }*/
     
     static class UniqueIntReducer extends Reducer<IntWritable, NullWritable, NullWritable, IntWritable> {
     	@Override
@@ -51,7 +51,7 @@ public class UniqueIntHadoop {
         job.setOutputKeyClass(NullWritable.class);
         job.setOutputValueClass(IntWritable.class);
 
-        job.setCombinerClass(Combiner.class);
+        //job.setCombinerClass(Combiner.class);
         
         job.setInputFormatClass(TextInputFormat.class);
         job.setOutputFormatClass(TextOutputFormat.class);
