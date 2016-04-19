@@ -1,2 +1,2 @@
 # LSDM-Assignment1
-These are the solutions to the Large Scale Data Mining course assignment 1
+This assignment is part of the [Large Scale Data Mining](http://pharos.l3s.uni-hannover.de:7080/lsdm) @ [Leibniz University Hannover](http://uni-hannover.de).
